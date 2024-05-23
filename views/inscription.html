@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form action="/register" method="POST" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="text" placeholder="Nom" name="nom" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Mot de passe" name="mot-de-passe" required>
+            <input type="text" placeholder="adresse" name="adresse" required>
+            <div class="check" style="display: flex; gap: 5px; justify-content: space-between;">
+                <label for="handicap" style="color:white">handicap</label>
+                <input type="checkbox" placeholder="handicap" name="handicap" id="handicap">
+            </div>
+            <select name="handicap-type" id="handicap-type" hidden>
+                <option value="mal-voyant">Mal voyant</option>
+                <option value="mal-voyant">Moteur</option>
+                <option value="mal-voyant">Sourd / Muet</option>
+            </select>
+            <button type="submit">S'inscrire</button>
+        </form>
+
+        <script src="{{ url_for('static', filename='main.js') }}"></script>
+    </div>
+</body>
+</html>

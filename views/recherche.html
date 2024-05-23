@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">rechercher</div>
+        <div class="tags">
+            <div class="tag"></div>
+            <div class="tag"></div>
+            <div class="tag"></div>
+        </div>
+        <div class="restaurants">
+            {% for i in range(restaurants|length) %}
+            <div class="restaurant">
+                <img src="" alt="">
+                <div class="txt-content">
+                    <p class="title">{{ restaurants[i][2] }}</p>
+                    <p class="description">courte description sur le restaurant</p>
+                </div>
+                <ul class="informations">
+                    <li class="localisation">
+                        <p>{{ localisations[i] }} m</p>
+                        <img src="path/to/localisation-icon.png" alt="">
+                    </li>
+                    <li class="seats">
+                        <p>13</p>
+                        <img src="path/to/seats-icon.png" alt="">
+                    </li>
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

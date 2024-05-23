@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserv'eat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">Reserv'eat</div>
+    <div class="main-img"></div>
+    <div class="container">
+        <div class="txt-content">
+            <h1>Trouvez le Restaurant Parfait autour de <span class="green-txt">Vous<span></h1>
+            <p>Trouvez le restaurant idéal à portée de main, rapidement et simplement.</p>
+        </div>
+        <div class="buttons">
+            <form action="/login">
+                <button type="submit" class="login-btn">Connexion</button></a>
+            </form>
+            <form action="/register">
+                <button class="signup-btn">Inscription</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
